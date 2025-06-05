@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import AuthForm from "../components/authform";
 import Welcome from "../components/Welcome";
 import { AuthContext, AuthProvider } from "../Context/AuthContext";
 

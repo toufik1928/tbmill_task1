@@ -18,7 +18,7 @@ export const registerUser = async (req, res) => {
   }
 };
 
-// ✅ Login controller
+//  Login controller
 export const loginUser = async (req, res) => {
   const { username, password } = req.body;
 
