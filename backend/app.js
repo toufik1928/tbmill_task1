@@ -10,8 +10,10 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// const __filename = fileURLToPath(import.meta.url);
+// const __dirname = path.dirname(__filename);
+
+const __dirname=path.resolve();
 
 // Middlewares
 app.use(cors({ origin: 'http://localhost:5173', credentials: true }));
@@ -24,10 +26,11 @@ connectDB();
 app.use('/api/auth', authRoutes); 
 
 // Serve frontend
-app.use(express.static(path.join(__dirname, '..', 'frontend', 'dist')));
+app.use(express.static(path.join(__dirname,"/frontend/dist")));
+// app.use(express.static(path.join(__dirname, '..', 'frontend', 'dist')));
 
 app.get(/(.*)/, (req, res) => {
-  res.sendFile(path.resolve(__dirname, '..', 'frontend', 'dist', 'index.html'));
+  res.sendFile(path.resolve(__dirname,'frontend', 'dist', 'index.html'));
 });
 
 app.listen(PORT, () => {
