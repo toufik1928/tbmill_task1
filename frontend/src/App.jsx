@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import Welcome from "../components/Welcome";
+import AuthForm from "../components/AuthForm";
 import { AuthContext, AuthProvider } from "../Context/AuthContext";
 
 function AppContent() {
