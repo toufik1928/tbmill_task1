@@ -1,7 +1,7 @@
 // src/components/WelcomePage/Welcome.jsx
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import styles from './WelcomePage.module.css'; // Import the CSS Module
+import styles from "../components/Welcome.css";
 
 const WelcomePage = ({ user, onLogout }) => {
   const navigate = useNavigate();
